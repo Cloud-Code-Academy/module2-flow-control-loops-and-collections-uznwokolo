@@ -125,7 +125,14 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
-        return null; // Replace null with the variable you used to store the result
+        if (a == null) {
+            return 'Null';
+        }else if(a == ''){
+            return 'Empty';
+        }else {
+            return 'Contains Text';
+        }
+        // Replace null with the variable you used to store the result
     }
 
     /**
@@ -140,8 +147,22 @@ public with sharing class FlowControlLoopsCollections {
      * @return The grade for the given score.
      */
     public static String determineGrade(Integer score) {
-        return null; // Replace null with the variable you used to store the result
+        String res;
+        if(score>=90){
+            res='A';
+        }else if (score>=80) {
+            res='B';
+        }else if (score>=70) {
+            res='C';
+        }else if (score>=60) {
+            res='D';
+        }else {
+            res='F';
+        }
+        return res;
     }
+         // Replace null with the variable you used to store the result
+    
 
 
     /**
@@ -151,13 +172,11 @@ public with sharing class FlowControlLoopsCollections {
      * @return The sum of all integers up to the limit.
      */
     public static Integer sumUpToLimit(Integer intLimit) {
-        /* 
-         for (){
-            
-         }
-        */
-
-        return null; // Replace null with the variable you used to store the result
+        Integer sum = 0;
+        for (Integer i = 1; i <= intLimit; i++){
+            sum += i;
+        }
+        return sum; // Replace null with the variable you used to store the result
     }
 
     /**
